@@ -65,3 +65,4 @@
 // div2.addEventListener('click', ()=>{console.log("Clicked the outer div")}, true)
 // btn.addEventListener('click', ()=>{console.log("Clicked the button")}, true)
 
+console.log("Hello Everyone")
