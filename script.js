@@ -65,4 +65,93 @@
 // div2.addEventListener('click', ()=>{console.log("Clicked the outer div")}, true)
 // btn.addEventListener('click', ()=>{console.log("Clicked the button")}, true)
 
-console.log("Hello Everyone")
+// console.log("Hello Everyone")
+
+// console.log(a)
+// //console.log(b)
+
+// var a=678
+// let b=567
+
+// console.log(a)
+// console.log(b)
+
+// function print(){
+//     let c=63
+//     console.log(c)
+//     console.log("Inside fn")
+// }
+
+// print()
+
+// greet()
+//console.log(message)
+//console.log(d)
+//debugger
+
+
+// function first(){
+//     Second()
+// }
+
+// function second(){
+//     third()
+// }
+
+// function third(){
+//     console.trace()
+// }
+
+// first()
+
+
+// setTimeout(()=>{
+//     alert("After 3second")
+// }, 3*1000)
+
+// const timerID=setInterval(()=>{
+//     console.log("After 3 sec")
+// },1000)
+// console.log(timerID)
+// setTimeout(()=>{
+//     clearInterval(timerID)
+// }, 10*1000)
+
+// let count=1
+// const timerID=setInterval(()=>{
+//     if(count===10)clearInterval(timerID)
+//     console.log(count)
+//     count+=1
+// },1000)
+
+
+// console.log("Before timeout")
+// setTimeout(()=>{
+//     console.log("Inside timeout")
+// },0)
+// console.log("After timeout")
+
+
+const name=document.querySelector("#name")
+const btn=document.querySelector(".btn")
+const list=document.querySelector(".list")
+
+
+btn.addEventListener('click', ()=>{
+    if(name.value==="")return
+
+    const li=document.createElement('li')
+    const dlt=document.createElement('button')
+    
+    dlt.innerText="Delete"
+    li.innerText=name.value;
+
+    dlt.addEventListener('click', ()=>{
+        list.removeChild(li)
+    })
+
+    list.appendChild(li)
+    li.appendChild(dlt)
+    
+    name.value=""
+})
