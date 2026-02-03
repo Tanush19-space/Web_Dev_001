@@ -193,28 +193,41 @@
 // }, 2000)
 
 
-function finishHomework(callback){
-    console.log("Starting homework.....")
+// function finishHomework(callback){
+//     console.log("Starting homework.....")
+//     setTimeout(()=>{
+//         console.log("Homework done!")
+//         callback()
+//     },2000)
+// }
+
+// function eatDinner(callback){
+//     console.log("Starting dinner.....")
+//     setTimeout(()=>{
+//         console.log("Dinner done!")
+//         callback()
+//     },1500)
+// }
+
+// function goToPlayground(){
+//     console.log("Going to the playground")
+// }
+
+// finishHomework(()=>{
+//     eatDinner(()=>{
+//         goToPlayground()
+//     })
+// })
+
+
+const p=new Promise((res, rej)=>{
+    let done=false
     setTimeout(()=>{
-        console.log("Homework done!")
-        callback()
-    },2000)
-}
-
-function eatDinner(callback){
-    console.log("Starting dinner.....")
-    setTimeout(()=>{
-        console.log("Dinner done!")
-        callback()
-    },1500)
-}
-
-function goToPlayground(){
-    console.log("Going to the playground")
-}
-
-finishHomework(()=>{
-    eatDinner(()=>{
-        goToPlayground()
-    })
+        if(done){
+        res("Work is done")
+        }else{
+        rej("Work is not done")
+        }
+    },5000)
 })
+console.log(p)
