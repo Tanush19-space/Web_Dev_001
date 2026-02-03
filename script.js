@@ -132,26 +132,27 @@
 // console.log("After timeout")
 
 
-const name=document.querySelector("#name")
-const btn=document.querySelector(".btn")
-const list=document.querySelector(".list")
+// const name=document.querySelector("#name")
+// const btn=document.querySelector(".btn")
+// const list=document.querySelector(".list")
 
 
-btn.addEventListener('click', ()=>{
-    if(name.value==="")return
+// btn.addEventListener('click', ()=>{
+//     if(name.value==="")return
 
-    const li=document.createElement('li')
-    const dlt=document.createElement('button')
+//     const li=document.createElement('li')
+//     const dlt=document.createElement('button')
     
-    dlt.innerText="Delete"
-    li.innerText=name.value;
+//     dlt.innerText="Delete"
+//     li.innerText=name.value;
 
-    dlt.addEventListener('click', ()=>{
-        list.removeChild(li)
-    })
+//     dlt.addEventListener('click', ()=>{
+//         list.removeChild(li)
+//     })
 
-    list.appendChild(li)
-    li.appendChild(dlt)
+//     list.appendChild(li)
+//     li.appendChild(dlt)
     
-    name.value=""
-})
+//     name.value=""
+// })
+
