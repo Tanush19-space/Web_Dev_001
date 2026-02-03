@@ -156,3 +156,65 @@
 //     name.value=""
 // })
 
+// console.log("Before timeout")
+// setTimeout(()=>{
+//     console.log("Inside the timeout")
+// },0)
+// console.log("After the timeout")
+
+// function greet(callback){         
+//     setTimeout(()=>{
+//         console.log("Hello Students")
+//         callback(45)
+//     }, 2000)
+// }
+
+// function print(num){      
+//     console.log("Total students are",num)
+// }
+
+// greet(print)
+
+
+// console.log("Starting homework.....")
+
+// setTimeout(()=>{
+//     console.log("Homework done!")
+//     console.log("Starting dinner.....")
+
+//     setTimeout(()=>{
+//         console.log("Dinner done!")
+//         console.log("Getting ready to go out.....")
+
+//         setTimeout(()=>{
+//             console.log("Going to the playground!")
+//         }, 1000)
+//     }, 1500)
+// }, 2000)
+
+
+function finishHomework(callback){
+    console.log("Starting homework.....")
+    setTimeout(()=>{
+        console.log("Homework done!")
+        callback()
+    },2000)
+}
+
+function eatDinner(callback){
+    console.log("Starting dinner.....")
+    setTimeout(()=>{
+        console.log("Dinner done!")
+        callback()
+    },1500)
+}
+
+function goToPlayground(){
+    console.log("Going to the playground")
+}
+
+finishHomework(()=>{
+    eatDinner(()=>{
+        goToPlayground()
+    })
+})
