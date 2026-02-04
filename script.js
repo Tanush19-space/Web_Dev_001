@@ -219,24 +219,85 @@
 //     })
 // })
 
+// console.log("Before Promise")
+// const p=new Promise((res, rej)=>{
+//     let done=true
+//     res({name:"Alex",age:34})
+//     setTimeout(()=>{
+//         if(done){
+//         res({name:"Alex",age:34})
+//         }else{
+//         rej("Work is not done")
+//         }
+//     },5000)
+// })
 
-const p=new Promise((res, rej)=>{
-    let done=false
-    setTimeout(()=>{
-        if(done){
-        res("Work is done")
-        }else{
-        rej("Work is not done")
-        }
-    },5000)
-})
+// p.then((msg)=>{
+//     console.log(msg)
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("Finally Block")
+// })
 
-p.then((msg)=>{
-    console.log(msg)
-}).catch((err)=>{
-    console.log(err)
-}).finally(()=>{
-    console.log("Finally Block")
-})
+// console.log("After Promise")
 
-console.log(p)
+
+// function doHomework(){
+//     const p=new Promise((res, rej)=>{
+//         setTimeout(()=>{
+//             let homeworkDone=true
+//             if(done){
+//                 resolve("Homework Complete")
+//             }else{
+//                 reject("Homework not Complete")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
+
+// function eatDinner(){
+//     const p=new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             let done=true
+//             if(done){
+//                 console.log("Dinner is done")
+//                 res("Dinner complete")
+//             }else{
+//                 rej("Dinner not complete")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
+
+// function goToPlayground(){
+//     const p=new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             let done=true
+//             if(done){
+//                 console.log("Went to playground")
+//                 res("Playground Time")
+//             }else{
+//                 rej("Not allowed")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
+
+// doHomework().then((msg)=>{
+//     console.log(msg)
+//     return eatDinner()
+// }).then((msg)=>{
+//     console.log(msg)
+//     return goToPlayground()
+// }).then((msg=>{
+//     console.log(msg)
+// })).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("Go to Sleep")
+// })
+
